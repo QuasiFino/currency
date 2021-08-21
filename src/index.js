@@ -1,17 +1,40 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
+import GetDetails from './components/GetDetails';
+import {
+  Grid,
+  Form,
+  Segment,
+  Button,
+  Header,
+  Message,
+  Icon,
+  Image,
+  Divider,
+  Container
+} from "semantic-ui-react";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Grid textAlign="center" verticalAlign="middle" className="app">
+      <Grid.Column style={{width:600}}>
+        <Divider></Divider>
+        <Image
+        src="https://i.ibb.co/WVcv2Dd/banner2.png" alt="banner2"
+        as='a'
+        size='massive'
+        href='https://opensea.io/collection/cryptographiccoins'
+        target='_blank'
+        />
+      </Grid.Column>
+    </Grid>
+
+    <GetDetails />
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
